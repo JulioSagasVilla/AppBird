@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+Guía para Compilar y Ejecutar el Código
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Requisitos Previos
 
-## Available Scripts
+- Node.js y npm instalados en tu sistema.
+  - Puedes descargarlos desde https://nodejs.org.
 
-In the project directory, you can run:
+Pasos para Ejecutar la Aplicación
 
-### `npm start`
+1. Clonar el Repositorio o Descargar los Archivos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   Opción 1: Clonar el Repositorio
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+   Si el código fuente está en un repositorio de GitHub, puedes clonarlo usando:
 
-### `npm test`
+   git clone https://github.com/tu-usuario/aves-guatemala.git
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   Luego, navega al directorio del proyecto:
 
-### `npm run build`
+   cd aves-guatemala
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   Opción 2: Descargar los Archivos
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   Si tienes los archivos en un archivo comprimido (.zip o .rar):
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   - Descomprime el archivo en una carpeta de tu elección.
+   - Navega al directorio del proyecto:
 
-### `npm run eject`
+     cd ruta/del/proyecto/aves-guatemala
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Instalar las Dependencias
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   En la terminal, dentro del directorio del proyecto, ejecuta:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   npm install
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   Esto instalará todas las dependencias necesarias para ejecutar la aplicación.
 
-## Learn More
+3. Ejecutar la Aplicación en Modo de Desarrollo
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   Una vez instaladas las dependencias, inicia la aplicación con:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   npm start
 
-### Code Splitting
+   Esto iniciará el servidor de desarrollo y abrirá la aplicación en tu navegador predeterminado en la dirección http://localhost:3000.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. Acceder a la Aplicación
 
-### Analyzing the Bundle Size
+   Si el navegador no se abre automáticamente, puedes abrirlo manualmente y navegar a:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   http://localhost:3000
 
-### Making a Progressive Web App
+   Deberías ver la pantalla de inicio de la aplicación.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+5. Navegar por la Aplicación
 
-### Advanced Configuration
+   - Pantalla de Inicio: Ingresa tu nombre completo y número de carnet en los campos correspondientes y haz clic en "Cargar".
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+   - Listado de Aves: Se mostrará una lista de aves de Guatemala, donde podrás ver detalles como la familia, nombre común, ubicación y descubridor. También puedes reproducir el sonido del ave haciendo clic en "Reproducir sonido".
 
-### Deployment
+Notas Adicionales
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Detener la Aplicación: Para detener el servidor de desarrollo, presiona Ctrl + C en la terminal donde está ejecutándose npm start.
 
-### `npm run build` fails to minify
+- Construir para Producción: Si deseas generar una versión optimizada para producción, ejecuta:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  npm run build
+
+  Esto creará una carpeta build con los archivos listos para desplegar en un servidor web.
+
+- Dependencias Necesarias: Asegúrate de que las siguientes dependencias estén instaladas (se instalan automáticamente con npm install):
+
+  - React y React DOM
+  - React Router DOM
+  - Material-UI (@mui/material, @mui/icons-material, @emotion/react, @emotion/styled)
+  - Fontsource Poppins (@fontsource/poppins)
+
+- Problemas Comunes:
+
+  - Error al instalar dependencias: Si encuentras errores al ejecutar npm install, verifica que tienes una versión compatible de Node.js.
+
+  - Puerto en uso: Si el puerto 3000 está en uso, puedes cambiar el puerto ejecutando:
+
+    En Windows:
+
+    set PORT=3001 && npm start
+
+    En macOS/Linux:
+
+    export PORT=3001 && npm start
+
+  - Actualizaciones de Dependencias: Si experimentas problemas con versiones de paquetes, puedes intentar actualizar las dependencias:
+
+    npm update
